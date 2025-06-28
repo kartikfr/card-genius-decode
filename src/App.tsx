@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,7 +8,7 @@ import Index from "./pages/Index";
 import CardDetail from "./pages/CardDetail";
 import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
-import ChatWidget from "./components/ChatWidget";
+import AIAssistant from "./pages/AIAssistant";
 
 const queryClient = new QueryClient();
 
@@ -24,10 +23,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/search" element={<Search />} />
             <Route path="/card/:slug" element={<CardDetail />} />
+            <Route path="/ai-assistant" element={<AIAssistant />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-        <ChatWidget />
       </TooltipProvider>
     </ComparisonProvider>
   </QueryClientProvider>
